@@ -1,12 +1,7 @@
 import requests
 
 def get_people_in_space():
-    """
-    Recupera i dati dall'API Open Notify sulle persone attualmente nello spazio.
 
-    Returns:
-        list of dict: Una lista di dizionari contenenti il nome e il veicolo per ogni persona nello spazio.
-    """
     url = "http://api.open-notify.org/astros.json"
     try:
         response = requests.get(url)
