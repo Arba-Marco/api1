@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+    <h2>Benvenuto, {{ username }}</h2>
+    <a href="{{ url_for('logout') }}">Esci</a>
+
+    <h3>Persone attualmente nello spazio</h3>
+    <ul>
+        {% for person in people_in_space %}
+        <li>{{ person.name }} - {{ person.craft }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
